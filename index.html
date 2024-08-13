@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanghoon Jung, PhD - Personal Website</title>
+    <title>Kanghoon Jung, PhD</title>
     <style>
         body {
-            font-family: Helvetica, sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #ffffff;
-            display: flex;
             color: #000000;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #cccccc;
+        }
+        header h1 {
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
         }
         .sidebar {
             width: 250px;
@@ -24,37 +43,26 @@
             display: flex;
             flex-direction: column;
             padding: 20px;
+            align-items: center;
         }
-        .sidebar h1 {
-            font-size: 22px;
+        .sidebar img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
             margin-bottom: 20px;
-            color: #3374ff;
-            font-weight: 400; 
         }
-        .sidebar nav {
-            margin-top: 20px;
-            flex-grow: 1;
-        }
-        .sidebar nav a {
-            display: block;
-            color: #000000;
-            text-decoration: none;
-            padding: 10px 0;
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .sidebar footer {
-            margin-top: auto;
-            font-size: 14px;
+        .sidebar .contact-info {
             text-align: center;
-            color: #000000;
+            margin-top: 20px;
+        }
+        .sidebar .contact-info p {
+            margin: 5px 0;
         }
         .content {
-            margin-left: 250px;
-            padding: 60px;
+            margin-left: 270px;
+            padding: 40px;
             max-width: 800px;
-            background-color: #ffffff;
-            color: #000000;
         }
         .content section {
             margin-bottom: 40px;
@@ -63,6 +71,7 @@
             color: #000000;
             border-bottom: 2px solid #000000;
             padding-bottom: 10px;
+            font-weight: 300; /* Thin font weight */
         }
         .content p {
             line-height: 1.6;
@@ -72,17 +81,24 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h1>KANGHOON JUNG, PHD</h1>
+    <header>
+        <h1>Kanghoon Jung, PhD</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
         </nav>
-        <footer>
-            &copy; 2024 Kanghoon Jung, PhD
-        </footer>
+    </header>
+
+    <div class="sidebar">
+        <img src="path-to-your-headshot.jpg" alt="Kanghoon Jung, PhD Headshot">
+        <div class="contact-info">
+            <p>Kanghoon Jung, PhD</p>
+            <p>Scientist, Allen Institute for Neural Dynamics</p>
+            <p>Email: kanghoon.jung@email.com</p>
+            <p>Phone: +1-123-456-7890</p>
+        </div>
     </div>
 
     <div class="content">
@@ -108,5 +124,3 @@
     </div>
 </body>
 </html>
-
-        
