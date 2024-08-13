@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanghoon Jung, PhD</title>
+    <title>Kanghoon Jung, PhD - Personal Website</title>
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
@@ -36,14 +36,10 @@
             width: 250px;
             background-color: #ffffff;
             color: #000000;
-            height: 100vh;
             position: fixed;
-            top: 0;
+            top: 160px; /* Adjust this to ensure the sidebar starts below the navigator */
             left: 0;
-            display: flex;
-            flex-direction: column;
             padding: 20px;
-            align-items: center;
         }
         .sidebar img {
             border-radius: 50%;
@@ -51,9 +47,12 @@
             height: 120px;
             object-fit: cover;
             margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .sidebar .contact-info {
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
         }
         .sidebar .contact-info p {
@@ -94,33 +93,6 @@
     <div class="sidebar">
         <img src="path-to-your-headshot.jpg" alt="Kanghoon Jung, PhD Headshot">
         <div class="contact-info">
-            <p>Kanghoon Jung, PhD</p>
+            <p><strong>Kanghoon Jung, PhD</strong></p>
             <p>Scientist, Allen Institute for Neural Dynamics</p>
-            <p>Email: kanghoon.jung@email.com</p>
-            <p>Phone: +1-123-456-7890</p>
-        </div>
-    </div>
-
-    <div class="content">
-        <section id="about">
-            <h2>About</h2>
-            <p>I’m a cognitive neuroscientist specialized in neural substrates of adaptive learning and intuitive decision-making through belief representations in neural ensembles within *** areas of the brain. I design carefully controlled behavioral tasks and use a range of tools, such as optogenetics, electrophysiology, in-vivo 2-photon imaging, miniature microscopy, fiber photometry, calcium and voltage indicators, and advanced computational modeling to investigate how the intricate activities of neural circuits encode, store, and retrieve information in guiding adaptive behavior. I am currently a Scientist in the Allen Institute for Neural Dynamics, and my training with Hyungbae Kwon at John Hopkins University contributed to the development and application of novel optogenetic and chemogenetic tools, including Cal-Light and iTango.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research</h2>
-            <p>Mapping the Neural Basis of Learning and Adaptive Behavior | Efficiently processing and retrieving streams of information is a critical adaptive ability that allows humans to reflect on, engage with, and respond to complex, dynamic environments. My research focuses on how mammalian brains navigate and encode moment-to-moment experiences in changing environments to learn behavioral strategies. Contributing to the Allen Institute's large scale and open science approach, I collaborate with leading scientists to map neural pathways and analyze how these dynamic interactions within brain circuits drive complex and flexible behaviors in mice. By combining behavioral tasks with specific neuromodulation activity measurements and manipulations, I aim to explain the mechanisms by which the brain adapts executive functions - such as encoding, storing, and retrieving information from recent actions - to shape decision-making strategies under conditions of uncertainty and reward processing. Understanding these functional brain dynamics and the pathways that become disrupted could lead to breakthroughs in treating psychiatric and neurodegenerative disorders.</p>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <p>List of your publications, including links to full texts or DOIs.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>How to get in touch with you, including email and other contact information.</p>
-        </section>
-    </div>
-</body>
-</html>
+            <p>Email: kanghoon
