@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanghoon Jung, PhD</title>
+    <title>Kanghoon Jung, Ph.D.</title>
     <style>
         body {
             font-family: Helvetica, sans-serif;
@@ -12,6 +12,13 @@
             background-color: #ffffff;
             color: #000000;
         }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }        
         header {
             text-align: center;
             padding: 20px 0;
@@ -32,7 +39,7 @@
             font-weight: bold;
         }
         .sidebar {
-            width: 250px;
+            width: 150px;
             background-color: #ffffff;
             color: #000000;
             position: fixed;
@@ -76,13 +83,49 @@
             margin: 20px 0;
             color: #000000;
         }
-    </style>
+
+        /* Social Icons */
+        .social-icons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #000000;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px){
+            .sidebar {
+                position: relative;
+                width: 100%;
+                top: 0;
+                margin-bottom: 20px;
+            }
+            .content {
+                margin-left: 0;
+            }
+        }        
+    </style>        
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+<div class="container">        
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="https://github.com/kanghoonj"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/kanghoon-jung-b2445a46/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://x.com/KanghoonJung"><i class="fa fa-twitter"></i></a>
+        <a href="mailto:kanghoon.jung@alleninstitute.org"><i class="fa fa-envelope"></i></a>
+    </div>
+    
     <header>
-        <h1>Kanghoon Jung, PhD</h1>
+        <h1>Kanghoon Jung, Ph.D.</h1>
         <nav>
-            <a href="#about">About</a>
+            <a href="#aboutme">About Me</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#contact">Contact</a>
@@ -92,17 +135,17 @@
     <div class="sidebar">
         <img src="Kj headshot.jpeg" alt="Kanghoon Jung, PhD">
         <div class="contact-info">
-            <p><strong>Kanghoon Jung, PhD</strong></p>
-            <p>Allen Institute for Neural Dynamics</p>
-            <p>Email: jeongkh@gmail.com</p>
+            <p><strong>Kanghoon Jung, Ph.D.</strong></p>
+            <p>Scientist at Allen Institute for Neural Dynamics</p>
+            <p>615 Westlake Ave N 
+                Seattle, WA 98109</p>
         </div>
     </div>
 
     <div class="content">
-        <section id="about">
-            <h2>About</h2>
-            <p>I’m a neuroscientist studying neural substrates of adaptive learning and decision-making. I use a range of tools, such as behavioral tasks, optogenetics, electrophysiology, in-vivo 2-photon imaging, miniature microscopy, fiber photometry, and advanced computational modeling to investigate how the intricate activities of neural circuits encode, store, and retrieve information in guiding adaptive behavior. I am currently a Scientist in the Allen Institute for Neural Dynamics, and my training with Hyungbae Kwon at John Hopkins University contributed to the development and application of novel optogenetic and chemogenetic tools, including Cal-Light and iTango.
-</p>
+        <section id="aboutme">
+            <h2>About Me</h2>
+            <p>I’m a neuroscientist studying neural substrates of adaptive learning and decision-making. I use a range of tools, such as behavioral tasks, optogenetics, electrophysiology, in-vivo 2-photon imaging, miniature microscopy, fiber photometry, and advanced computational modeling to investigate how the intricate activities of neural circuits encode, store, and retrieve information in guiding adaptive behavior. I am currently a Scientist in the Allen Institute for Neural Dynamics, and my training with Hyungbae Kwon at John Hopkins University contributed to the development and application of novel optogenetic and chemogenetic tools, including Cal-Light and iTango.</p>
         </section>
 
         <section id="research">
@@ -117,11 +160,15 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <span>jeongkh@gmail.com</span>
+            <span>kanghoon.jung@alleninstitute.org</span>
             <p>Allen Institute for Neural Dynamics 
                615 Westlake Ave N 
                Seattle, WA 98109</p>
         </section>
+        <!-- Footer -->
+            <div class="footer">
+        <p>Email: <a href="mailto:kanghoon.jung@alleninstitute.org">kanghoon.jung@alleninstitute.org</a> | Web: <a href="https://kanghoonj.github.io/">kanghoonj.github.io</a></p>
+    </div>
     </div>
 </body>
 </html>
