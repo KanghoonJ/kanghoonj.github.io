@@ -5,48 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanghoon Jung, Ph.D.</title>
     <style>
+        /* General Styling */
         body {
             font-family: Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #f9f9f9;
+            color: #333;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 50px auto;
             background-color: #fff;
             padding: 20px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        }        
-        header {
-            text-align: center;
-            padding: 20px 0;
         }
-        header h1 {
-            font-size: 28px;
-            margin: 0;
+
+        /* Sticky Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
             font-weight: bold;
+            font-size: 22px;
         }
-        nav {
-            text-align: center;
-            margin: 20px 0;
+
+        .nav-right {
+            display: flex;
+            align-items: center;
         }
-        nav a {
+
+        .nav-right a {
             margin: 0 15px;
             text-decoration: none;
-            color: #000000;
+            color: #333;
             font-weight: bold;
+            font-size: 14px;
         }
+
+        .nav-right a:hover {
+            color: #0073e6;
+        }
+
+        /* Sidebar */
         .sidebar {
-            width: 150px;
-            background-color: #ffffff;
-            color: #000000;
+            width: 250px;
+            background-color: #fff;
+            color: #000;
             position: fixed;
-            top: 160px; /* Adjust this to ensure the sidebar starts below the navigator */
+            top: 160px;
             left: 0;
             padding: 20px;
+            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
         }
+
         .sidebar img {
             border-radius: 50%;
             width: 120px;
@@ -57,120 +79,148 @@
             margin-left: auto;
             margin-right: auto;
         }
-        .sidebar .contact-info {
-            text-align: left;
-            margin-top: 20px;
-        }
+
         .sidebar .contact-info p {
             margin: 5px 0;
+            font-size: 14px;
         }
+
+        /* Main Content */
         .content {
             margin-left: 270px;
             padding: 40px;
-            max-width: 800px;
+            max-width: 900px;
         }
-        .content section {
-            margin-bottom: 40px;
-        }
+
         .content h2 {
-            color: #000000;
-            border-bottom: 2px solid #000000;
+            color: #333;
+            border-bottom: 2px solid #0073e6;
             padding-bottom: 10px;
-            font-weight: 300; /* Thin font weight */
+            font-weight: 300;
         }
+
         .content p {
             line-height: 1.6;
             margin: 20px 0;
-            color: #000000;
+            color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #0073e6;
         }
 
         /* Social Icons */
-        .social-icons {
-            text-align: center;
-            margin-bottom: 20px;
-        }
         .social-icons a {
             margin: 0 10px;
-            color: #000000;
-            font-size: 24px;
+            color: #333;
+            font-size: 20px;
             text-decoration: none;
         }
 
-        /* Media query for mobile responsiveness */
-        @media (max-width: 768px){
+        .social-icons a:hover {
+            color: #0073e6;
+        }
+
+        /* Media Query for Mobile */
+        @media (max-width: 768px) {
             .sidebar {
                 position: relative;
                 width: 100%;
                 top: 0;
                 margin-bottom: 20px;
+                box-shadow: none;
             }
+
             .content {
                 margin-left: 0;
             }
-        }        
-    </style>        
-    <!-- Add FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+            .header {
+                padding: 10px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-right {
+                margin-top: 10px;
+            }
+        }
+    </style>
+    <!-- Correct FontAwesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-<div class="container">        
-    <!-- Social Icons -->
-    <div class="social-icons">
-        <a href="https://github.com/kanghoonj"><i class="fa fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/kanghoon-jung-b2445a46/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://x.com/KanghoonJung"><i class="fa fa-twitter"></i></a>
-        <a href="mailto:kanghoon.jung@alleninstitute.org"><i class="fa fa-envelope"></i></a>
-    </div>
-    
-    <header>
-        <h1>Kanghoon Jung, Ph.D.</h1>
-        <nav>
-            <a href="#aboutme">About Me</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <div class="sidebar">
-        <img src="Kj headshot.jpeg" alt="Kanghoon Jung, PhD">
-        <div class="contact-info">
-            <p><strong>Kanghoon Jung, Ph.D.</strong></p>
-            <p>Scientist at Allen Institute for Neural Dynamics</p>
-            <p>615 Westlake Ave N 
-                Seattle, WA 98109</p>
+<!-- Sticky Header Section -->
+<header class="header">
+    <div class="logo">
+        KANGHOON JUNG
+    </div>
+    <div class="nav-right">
+        <a href="#aboutme">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <div class="social-icons">
+            <a href="https://x.com/KanghoonJung" target="_blank"><i class="fab fa-x"></i></a>
+            <a href="https://linkedin.com/in/kanghoon-jung-b2445a46/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:kanghoon.jung@alleninstitute.org"><i class="fas fa-envelope"></i></a>
         </div>
     </div>
+</header>
 
-    <div class="content">
-        <section id="aboutme">
-            <h2>About Me</h2>
-            <p>I’m a neuroscientist studying neural substrates of adaptive learning and decision-making. I use a range of tools, such as behavioral tasks, optogenetics, electrophysiology, in-vivo 2-photon imaging, miniature microscopy, fiber photometry, and advanced computational modeling to investigate how the intricate activities of neural circuits encode, store, and retrieve information in guiding adaptive behavior. I am currently a Scientist in the Allen Institute for Neural Dynamics, and my training with Hyungbae Kwon at John Hopkins University contributed to the development and application of novel optogenetic and chemogenetic tools, including Cal-Light and iTango.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research</h2>
-            <p>Mapping the Neural Basis of Learning and Adaptive Behavior | Efficiently processing and retrieving streams of information is a critical adaptive ability that allows humans to reflect on, engage with, and respond to complex, dynamic environments. My research focuses on how mammalian brains navigate and encode moment-to-moment experiences in changing environments to learn behavioral strategies. Contributing to the Allen Institute's large scale and open science approach, I collaborate with leading scientists to map neural pathways and analyze how these dynamic interactions within brain circuits drive complex and flexible behaviors in mice. By combining behavioral tasks with specific neuromodulation activity measurements and manipulations, I aim to explain the mechanisms by which the brain adapts executive functions - such as encoding, storing, and retrieving information from recent actions - to shape decision-making strategies under conditions of uncertainty and reward processing. Understanding these functional brain dynamics and the pathways that become disrupted could lead to breakthroughs in treating psychiatric and neurodegenerative disorders.</p>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <a href="https://scholar.google.com/citations?user=cvXgYs4AAAAJ&hl=en">Visit my Google Scholar profile</a>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <span>kanghoon.jung@alleninstitute.org</span>
-            <p>Allen Institute for Neural Dynamics 
-               615 Westlake Ave N 
-               Seattle, WA 98109</p>
-        </section>
-        <!-- Footer -->
-            <div class="footer">
-        <p>Email: <a href="mailto:kanghoon.jung@alleninstitute.org">kanghoon.jung@alleninstitute.org</a> | Web: <a href="https://kanghoonj.github.io/">kanghoonj.github.io</a></p>
+<!-- Sidebar Section -->
+<div class="sidebar">
+    <img src="Kj headshot.jpeg" alt="Kanghoon Jung, PhD">
+    <div class="contact-info">
+        <p><strong>Kanghoon Jung, Ph.D.</strong></p>
+        <p>Scientist at Allen Institute for Neural Dynamics</p>
+        <p>615 Westlake Ave N<br>Seattle, WA 98109</p>
     </div>
-    </div>
+</div>
+
+<!-- Main Content Section -->
+<div class="content">
+    <section id="aboutme">
+        <h2>About Me</h2>
+        <p>I’m a neuroscientist studying neural substrates of adaptive learning and decision-making. I use a range of tools, such as behavioral tasks, optogenetics, electrophysiology, in-vivo 2-photon imaging, miniature microscopy, fiber photometry, and advanced computational modeling to investigate how the intricate activities of neural circuits encode, store, and retrieve information in guiding adaptive behavior. I am currently a Scientist in the Allen Institute for Neural Dynamics, and my training with Hyungbae Kwon at Johns Hopkins University contributed to the development and application of novel optogenetic and chemogenetic tools, including Cal-Light and iTango.</p>
+    </section>
+
+    <section id="research">
+        <h2>Research</h2>
+        <p>Mapping the Neural Basis of Learning and Adaptive Behavior | Efficiently processing and retrieving streams of information is a critical adaptive ability that allows humans to reflect on, engage with, and respond to complex, dynamic environments. My research focuses on how mammalian brains navigate and encode moment-to-moment experiences in changing environments to learn behavioral strategies. Contributing to the Allen Institute's large-scale and open science approach, I collaborate with leading scientists to map neural pathways and analyze how these dynamic interactions within brain circuits drive complex and flexible behaviors in mice. By combining behavioral tasks with specific neuromodulation activity measurements and manipulations, I aim to explain the mechanisms by which the brain adapts executive functions - such as encoding, storing, and retrieving information from recent actions - to shape decision-making strategies under conditions of uncertainty and reward processing. Understanding these functional brain dynamics and the pathways that become disrupted could lead to breakthroughs in treating psychiatric and neurodegenerative disorders.</p>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        <a href="https://scholar.google.com/citations?user=cvXgYs4AAAAJ&hl=en" target="_blank">Visit my Google Scholar profile</a>
+    </section>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>Email: <a href="mailto:kanghoon.jung@alleninstitute.org">kanghoon.jung@alleninstitute.org</a> | Web: <a href="https://kanghoonj.github.io/">kanghoonj.github.io</a></p>
+</div>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
-    
-        
